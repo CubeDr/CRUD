@@ -19,7 +19,9 @@ class RestaurantServerHandler(BaseHTTPRequestHandler):
         html = ''
         html += '<html><body>'
         for r in result:
-            html += '<p>' + r.name + '</p>'
+            html += '<h2>' + r.name + '</h2>'
+            html += '<a href="#">Edit</a> <a href="#">Delete</a>'
+            html += '<br>'
         html += '</body></html>'
 
         return html
